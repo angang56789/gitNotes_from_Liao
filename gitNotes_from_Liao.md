@@ -222,6 +222,12 @@ $ git checkout -b branch-name origin/branch-name，
 ```
 本地和远程分支的名称最好一致；
 
+#### 如果本地新建了一个分支 branch_name，但是在远程没有
+```bash
+$ git push --set-upstream origin branch_name，
+```
+这样就可以自动在远程创建一个 branch_name 分支，然后本地分支会 track该分支。后面再对该分支使用 push 和 pull 就自动同步,无需再指定分支；
+
 #### 如果远程新建了一个分支，本地没有该分支，在本地创建和远程分支对应的分支
 ```bash
 $ git checkout --track origin/branch_name，
