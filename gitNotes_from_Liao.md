@@ -161,7 +161,7 @@ $ git branch
 ```bash
 $ git branch -vv
 ```
-`git branch`命令会列出所有分支，当前分支前面会标一个*号。
+`git branch -vv`命令会列出所有分支，当前分支前面会标一个*号,蓝色为对应的远程分支。
 
 #### 切换分支
 ```bash
@@ -221,6 +221,12 @@ $ git remote -v
 $ git checkout -b branch-name origin/branch-name，
 ```
 本地和远程分支的名称最好一致；
+
+#### 如果远程新建了一个分支，本地没有该分支，在本地创建和远程分支对应的分支
+```bash
+$ git checkout --track origin/branch_name，
+```
+这时本地会新建一个分支名叫 branch_name ，会自动跟踪远程的同名分支 branch_name；
 
 #### 建立本地分支和远程分支的关联
 ```bash
